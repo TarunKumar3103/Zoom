@@ -28,7 +28,7 @@ export const tokenProvider = async() => {
         iat: issued
     };
 
-    const token = jwt.sign(payload, secret); // Sign the token with your secret
+    const token = jwt.sign(payload, secret!); // Sign the token with your secret
 
     return token;
 }
