@@ -19,7 +19,6 @@ export const tokenProvider = async() => {
     if(!apiSecret) throw new Error("No API Secret")
 
     const client = new StreamClient(apiKey, apiSecret);
-
     const exp = Math.floor(Date.now() / 1000) + (60 * 60); // 1 hour expiration
     const issued = Math.floor(Date.now() / 1000); // Current timestamp
 
